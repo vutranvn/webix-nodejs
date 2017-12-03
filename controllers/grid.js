@@ -1,10 +1,10 @@
 var db = require("../db");
 
 module.exports = {
+
 	getData : function(req, res){
 		db.User.findAll().then(data => res.json(data));
 	},
-
 
 	removeData: function(req, res){
 		db.User.findById(req.params.userId)
@@ -18,6 +18,7 @@ module.exports = {
 		db.User.create(req.body).then((obj) =>
 				res.json({ id: obj.id }));
 	},
+
 	updateData: function(req, res){
 		var { username, email, name, birthday, age, group_id } = req.body;
 		console.log(username, birthday)

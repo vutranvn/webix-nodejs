@@ -5,6 +5,7 @@ module.exports = {
 	getData: function(req, res){
 		db.User.findById(req.params.recordId).then(data => res.json(data));
 	},
+
 	saveData: function(req, res){
 		db.User.findById(req.body.id)
 			.then((user) =>
@@ -16,6 +17,7 @@ module.exports = {
 			.then(() =>
 				res.json({}));
 	},
+
 	getOptions: function(req, res){
 		db.Group.findAll({ attributes: ["id", ["name", "value"]] }).then((data) => res.json(data));
 	},
