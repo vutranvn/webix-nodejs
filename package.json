@@ -1,0 +1,31 @@
+{
+  "name": "webix-nodejs-demo",
+  "version": "1.0.0",
+  "description": "Webix NodeJS (Express + Mongo) Demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:webix-hub/webix-nodejs-demo.git"
+  },
+  "keywords": [
+    "webix",
+    "demo"
+  ],
+  "author": "Maksim Kozhukh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webix-hub/webix-nodejs-demo/issues"
+  },
+  "homepage": "https://github.com/webix-hub/webix-nodejs-demo",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "~3.5.1",
+    "express-handlebars": "^3.0.0",
+    "formidable": "^1.1.1",
+    "mongodb": "~2.2"
+  }
+}

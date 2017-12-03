@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Webix Dashboard NodeJS</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//cdn.webix.com/site/webix.css?v=5.0.0">
+		<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+
+		<script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
+	</head>
+	<body class="webix_full_screen">
+		<div id="wrapper" class="webix_view">
+
+			<div class="webix_view webix_toolbar webix_layout_toolbar" role="toolbar">
+				<div class="webix_scroll_cont">
+					<div class="webix_view webix_control webix_el_label header-logo">
+						<div style="height:100%; line-height:50px">
+							<a href="/"><img class="photo" src="/assets/imgs/logo.png"></a>
+						</div>
+					</div>
+					<div class="webix_view header-person">
+						<div class=" webix_template">
+							<div style="height:100%; width:100%;">
+								<img class="photo" src="/assets/imgs/3.png">
+								<span class="name">Administrator</span>
+								<span class="webix_icon fa-angle-down"></span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			{{!-- <h1 class='header'>
+				<a href="/">
+					<div class="webix-logo"></div>
+					NodeJs (Express) Samples
+					<a class='docs' href='https://docs.webix.com/desktop__basic_tasks.html'>Go to docs</a>
+				</a>
+			</h1> --}}
+
+			<div class='mainarea'>
+
+				<ul class='left'>
+					{{#each menu}}
+					<li>
+						<span>{{value}}</span>
+						<ul>
+							{{#each data}}
+							<li class='{{css}}'>
+								<span class='webix_icon icon {{icon}}'></span>
+								<a href='{{href}}'>{{value}}</a>
+							</li>
+							{{/each}}
+						</ul>
+					</li>
+					{{/each}}
+				</ul>
+
+				<content class="right">{{{body}}}</content>
+
+			</div>
+		</div>
+
+		<script>
+
+		</script>
+	</body>
+</html>
